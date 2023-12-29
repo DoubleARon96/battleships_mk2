@@ -72,8 +72,6 @@ class Player_Input:
         return player_choice
 
 
-
-
 class Battleship():
 
     """
@@ -222,8 +220,7 @@ class Game:
                 else:
                     print(result)
 
-
-            print ("Misses:", len(misses))
+            print("Misses:", len(misses))
 
             if (num_misses == len(ships)):
                 misses.append((player_choice[0], player_choice[1]))
@@ -231,14 +228,14 @@ class Game:
             gd.update_grid(ships, misses)
             print("Shots left: " + str(self.shots))
             gd.print_grid()
-            # checks if game over 
+            # checks if game over
             if self.shots == 0 or all(not ship.Is_Alive for ship in ships):
                 game_over = True
                 self.score = self.shots * 10
-                
+
                 if self.shots == 0:
                     print("Game Over! You Ran Out! You lose!")
-                
+
                 else:
                     print("WOOO HOOO You Won This Battle")
                     print(f"Your score is {self.score}")
