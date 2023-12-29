@@ -98,3 +98,40 @@ class grid_drawing():
         y = 5
         x = 10
         self.grid = [["O" for _ in range(x)] for _ in range(y)]
+     for ship in ships:
+            print(ship.coords_X, ship.coords_Y)
+            if(ship.Is_Alive):
+                self.grid[ship.coords_Y][ship.coords_X] = "S"
+            else:
+                self.grid[ship.coords_Y][ship.coords_X] = "H"
+        for i, j in misses:
+            self.grid[i][j] = "M"
+        self.ships = ships
+        self.misses = misses
+
+    def update_grid(self, ships, misses):
+        for ship in ships:
+            print(ship.coords_X, ship.coords_Y)
+            if(ship.Is_Alive):
+                self.grid[ship.coords_Y][ship.coords_X] = "S"
+            else:
+                self.grid[ship.coords_Y][ship.coords_X] = "H"
+        for i, j in misses:
+            self.grid[i][j] = "M"
+
+    def print_grid(self):
+        print("----------------------")
+        print("|      0123456789    |")
+        for i in range(len(self.grid)):
+            print("|    " + str(i) + " ",end="")
+            for j in range(len(self.grid[i])):
+                # This code will hide the ships and empty spaces
+                # So you can easily hide the grid
+                if(self.grid[i][j] == "S" or self.grid[i][j] == "O"):
+                    print("?", end="")
+                else:
+                    print(self.grid[i][j],end="")
+            print("    |")
+        print("----------------------")
+    #these help choose where the ships spawn on the grid
+'\n' 
