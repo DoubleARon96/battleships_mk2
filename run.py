@@ -174,7 +174,7 @@ class Player_Input_checks():
 class Game:
     """
     this function is the main one and make it run
-    it makes the game have a set amout of rounds
+    it makes the game have a set amount of rounds
     and sets score too
     """
 
