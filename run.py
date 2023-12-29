@@ -43,6 +43,7 @@ class Player_Input:
         if not self.player_name:
             print("please Enter Name")
             self.player_name = self.get_player_name()
+    # this function makes an exception for player inputs
 
     def get_player_choice(self):
         valid_input = False
@@ -54,8 +55,17 @@ class Player_Input:
                 player_choice = list(map(int, player_input.split(",")))
                 if (len(player_choice) != 2):
                     raise Exception("To Many Inputs")
+
+                elif (
+                    player_choice[0] not in range(5) or
+                    player_choice[1] not in range(10)
+                ):
+
+                    raise Exception("Input Out of Range")
                 valid_input = True
+
             except (ValueError, Exception) as e:
+                e = "Please refer to the example for inputs = e.g: 0,0"
                 print(e)
                 valid_input = False
 
@@ -83,7 +93,7 @@ class Battleship():
         self.coords_Y = random_num_choice_Y
 
     def check_hit_or_miss(self, X, Y):
-        #print(self.coords_X, self.coords_Y)
+
         if (X == self.coords_X and Y == self.coords_Y):
             self.Is_Alive = False
             return "Hit!"
@@ -103,7 +113,8 @@ class grid_drawing():
         x = 10
         self.grid = [["O" for _ in range(x)] for _ in range(y)]
         for ship in ships:
-                #print(ship.coords_X, ship.coords_Y)
+            # this if statement checks if the ship is
+            # a S or if its been hit
             if (ship.Is_Alive):
                 self.grid[ship.coords_Y][ship.coords_X] = "S"
             else:
@@ -115,7 +126,7 @@ class grid_drawing():
 
     def update_grid(self, ships, misses):
         for ship in ships:
-            #print(ship.coords_X, ship.coords_Y)
+
             if (ship.Is_Alive):
                 self.grid[ship.coords_Y][ship.coords_X] = "S"
             else:
