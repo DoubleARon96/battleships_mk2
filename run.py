@@ -64,13 +64,12 @@ class Player_Input:
 
 
 class Battleship():
-'''
-This class is to check the grid if the player input is a miss or hit.
-'''
+
     def __init__(self, coords_X, coords_Y):
         self.coords_X = coords_X
         self.coords_Y = coords_Y
         self.Is_Alive = True
+
     def set_random_location(self):
         random_nums_Y = [0, 1, 2, 3, 4]
         random_num_choice_Y = random.choice(random_nums_Y)
@@ -88,8 +87,11 @@ This class is to check the grid if the player input is a miss or hit.
         else:
             return "Miss!"
 print("test1")
+
+
 class grid_drawing():
     grid = [[],[]]
+    
     
     """
     this class draws out the grid and updates the ships, hits, misses
@@ -98,12 +100,12 @@ class grid_drawing():
         y = 5
         x = 10
         self.grid = [["O" for _ in range(x)] for _ in range(y)]
-     for ship in ships:
+        for ship in ships:
             print(ship.coords_X, ship.coords_Y)
-            if(ship.Is_Alive):
+        if(ship.Is_Alive):
                 self.grid[ship.coords_Y][ship.coords_X] = "S"
-            else:
-                self.grid[ship.coords_Y][ship.coords_X] = "H"
+        else:
+            self.grid[ship.coords_Y][ship.coords_X] = "H"
         for i, j in misses:
             self.grid[i][j] = "M"
         self.ships = ships
@@ -151,7 +153,7 @@ class Player_Input_checks():
                         return True
 
         return False
-        
+
 class Game:
     def __init__(self, shots, score):
         self.shots = shots
