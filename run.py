@@ -202,12 +202,14 @@ class Game:
             print(player_choice)
 
             num_misses = 0
+            num_misses = 0
             for ship in ships:
-                result = ship.check_hit_or_miss(player_choice[0], player_choice[1])
-                if (result == "Miss!"):
-                    num_misses += 1
-                else:
-                    print(result)
+                x, y = player_choice[0], player_choice[1]
+                result = ship.check_hit_or_miss(x, y)
+            if (result == "Miss!"):
+                num_misses += 1
+            else:
+                print(result)
 
             if (num_misses == len(ships)):
                 misses.append((player_choice[0], player_choice[1]))
