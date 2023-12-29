@@ -71,3 +71,19 @@ This class is to check the grid if the player input is a miss or hit.
         self.coords_X = coords_X
         self.coords_Y = coords_Y
         self.Is_Alive = True
+    def set_random_location(self):
+        random_nums_Y = [0, 1, 2, 3, 4]
+        random_num_choice_Y = random.choice(random_nums_Y)
+        random_nums_X = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        random_num_choice_X = random.choice(random_nums_X)
+        self.coords_X = random_num_choice_X
+        self.coords_Y = random_num_choice_Y
+
+    def check_hit_or_miss(self, X, Y):
+        print(self.coords_X, self.coords_Y)
+        if (X == self.coords_X and Y == self.coords_Y):
+            self.Is_Alive = False
+            return "Hit!"
+
+        else:
+            return "Miss!"
