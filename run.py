@@ -2,14 +2,14 @@ from random import randint
 import time
 import random
 
-# computer and player scores set to 0 
-scores = {"computer":0, "player":0}
+# computer and player scores set to 0
+scores = {"computer": 0, "player": 0}
 # Global variables for grid
 player_grid_rows = 5
 player_grid_column = 10
 cpu_grid_rows = 5
 cpu_grid_column = 10
-#global name variable 
+# global name variable
 name = ()
 
 
@@ -20,24 +20,22 @@ class Player_Input:
 
         self.player_name = player_name
 
-
     def get_player_name(self):
         player_name = ""
-        
+
         while not player_name:
-            
+
             player_name = input("Enter Name Here ").strip()
 
             if not player_name:
 
                 print("Name Is Required")
 
-    
         print(f"Output:Welcome to the battle {player_name}")
-        
+
         self.player_name = player_name
         return self.player_name
-    
+
     def check_player_name(self):
         """
         checks players name
@@ -45,26 +43,32 @@ class Player_Input:
         if not self.player_name:
             print("please Enter Name")
             self.player_name = self.get_player_name()
-    
+
     def get_player_choice(self):
         valid_input = False
         while not valid_input:
-            print("Input Guild:first number is Y axis (0 To 4) and second number is X axis (0 To 9")
+            print("Input Guild:first number is Y axis (0 To 4)")
+            print("Input Guild:second number is X axis (0 To 9)")
             player_input = input("Enter your choice: ")
             try:
                 player_choice = list(map(int, player_input.split(",")))
-                if(len(player_choice) != 2 ):
+                if (len(player_choice) != 2):
                     raise Exception("To Many Inputs")
                 valid_input = True
-            except Exception as e: 
-                print(e)
-                valid_input = False
-        
-        return player_choice
+                except Exception as e:
+                    print(e)
+                    valid_input = False
+
+                return player_choice
 
 
 class Battleship():
 
+    """
+    this class is the battle ship
+    and gives it the states it needs
+    to change from alive with a boolen
+    """
     def __init__(self, coords_X, coords_Y):
         self.coords_X = coords_X
         self.coords_Y = coords_Y
@@ -86,13 +90,14 @@ class Battleship():
 
         else:
             return "Miss!"
+
+
 print("test1")
 
 
 class grid_drawing():
-    grid = [[],[]]
-    
-    
+
+    grid = [[], []]
     """
     this class draws out the grid and updates the ships, hits, misses
     """
@@ -102,8 +107,8 @@ class grid_drawing():
         self.grid = [["O" for _ in range(x)] for _ in range(y)]
         for ship in ships:
             print(ship.coords_X, ship.coords_Y)
-        if(ship.Is_Alive):
-                self.grid[ship.coords_Y][ship.coords_X] = "S"
+        if (ship.Is_Alive):
+            self.grid[ship.coords_Y][ship.coords_X] = "S"
         else:
             self.grid[ship.coords_Y][ship.coords_X] = "H"
         for i, j in misses:
@@ -114,7 +119,7 @@ class grid_drawing():
     def update_grid(self, ships, misses):
         for ship in ships:
             print(ship.coords_X, ship.coords_Y)
-            if(ship.Is_Alive):
+            if (ship.Is_Alive):
                 self.grid[ship.coords_Y][ship.coords_X] = "S"
             else:
                 self.grid[ship.coords_Y][ship.coords_X] = "H"
@@ -125,22 +130,26 @@ class grid_drawing():
         print("----------------------")
         print("|      0123456789    |")
         for i in range(len(self.grid)):
-            print("|    " + str(i) + " ",end="")
+            print("|    " + str(i) + " ", end="")
             for j in range(len(self.grid[i])):
                 # This code will hide the ships and empty spaces
                 # So you can easily hide the grid
-                if(self.grid[i][j] == "S" or self.grid[i][j] == "O"):
+                if (self.grid[i][j] == "S" or self.grid[i][j] == "O"):
                     print("?", end="")
                 else:
-                    print(self.grid[i][j],end="")
+                    print(self.grid[i][j], end="")
             print("    |")
         print("----------------------")
-    #these help choose where the ships spawn on the grid
-'\n' 
+    # these help choose where the ships spawn on the grid
+
+
+'\n'
+
+
 class Player_Input_checks():
- 
+
     def __init__(self, player_choice, misses, hits):
-        
+
         self.player_choice = player_choice
         self.misses = misses
         self.hits = hits
@@ -154,19 +163,26 @@ class Player_Input_checks():
 
         return False
 
+
 class Game:
+    """
+    this function is the main one and make it run
+    it makes the game have a set amout of rounds
+    and sets score too
+    """
+
     def __init__(self, shots, score):
         self.shots = shots
         self.score = score
-    
+
     def start(self):
         ship1 = Battleship(0, 0)
         ship1.set_random_location()
 
-        ship2 = Battleship(0,0)
+        ship2 = Battleship(0, 0)
         ship2.set_random_location()
 
-        ship3 = Battleship(0,0)
+        ship3 = Battleship(0, 0)
         ship3.set_random_location()
 
         ships = [ship1, ship2, ship3]
@@ -188,17 +204,18 @@ class Game:
             num_misses = 0
             for ship in ships:
                 result = ship.check_hit_or_miss(player_choice[0], player_choice[1])
-                if(result == "Miss!"):
+                if (result == "Miss!"):
                     num_misses += 1
                 else:
                     print(result)
 
-            if(num_misses == len(ships)):
+            if (num_misses == len(ships)):
                 misses.append((player_choice[0], player_choice[1]))
 
             gd.update_grid(ships, misses)
             print("Shots left: " + str(self.shots))
             gd.print_grid()
+
 
 game = Game(10, 0)
 game.start()
