@@ -55,11 +55,11 @@ class Player_Input:
                 if (len(player_choice) != 2):
                     raise Exception("To Many Inputs")
                 valid_input = True
-                except Exception as e:
-                    print(e)
-                    valid_input = False
+            except (ValueError, Exception) as e:
+                print(e)
+                valid_input = False
 
-                return player_choice
+        return player_choice
 
 
 class Battleship():
@@ -118,7 +118,7 @@ class grid_drawing():
 
     def update_grid(self, ships, misses):
         for ship in ships:
-            print(ship.coords_X, ship.coords_Y)
+            #print(ship.coords_X, ship.coords_Y)
             if (ship.Is_Alive):
                 self.grid[ship.coords_Y][ship.coords_X] = "S"
             else:
