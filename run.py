@@ -142,7 +142,7 @@ class Player_Input_checks():
         self.player_choice = player_choice
         self.misses = misses
         self.hits = hits
-        
+
     def check_input(self, input):
         if len(input) == 2:
             if input[0].isalpha() and input[0].upper() in "ABCDE":
@@ -151,3 +151,52 @@ class Player_Input_checks():
                         return True
 
         return False
+        
+class Game:
+    def __init__(self, shots, score):
+        self.shots = shots
+        self.score = score
+    
+    def start(self):
+        ship1 = Battleship(0, 0)
+        ship1.set_random_location()
+
+        ship2 = Battleship(0,0)
+        ship2.set_random_location()
+
+        ship3 = Battleship(0,0)
+        ship3.set_random_location()
+
+        ships = [ship1, ship2, ship3]
+
+        misses = []
+
+        player = Player_Input()
+
+        player.check_player_name()
+
+        gd = grid_drawing(ships, misses)
+        print("Shots left: " + str(self.shots))
+        gd.print_grid()
+        while self.shots > 0:
+            player_choice = player.get_player_choice()
+            self.shots -= 1
+            print(player_choice)
+
+            num_misses = 0
+            for ship in ships:
+                result = ship.check_hit_or_miss(player_choice[0], player_choice[1])
+                if(result == "Miss!"):
+                    num_misses += 1
+                else:
+                    print(result)
+
+            if(num_misses == len(ships)):
+                misses.append((player_choice[0], player_choice[1]))
+
+            gd.update_grid(ships, misses)
+            print("Shots left: " + str(self.shots))
+            gd.print_grid()
+
+game = Game(10, 0)
+game.start()
