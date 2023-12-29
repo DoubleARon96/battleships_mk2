@@ -1,20 +1,23 @@
 # The Quiz Game
 
-The Quiz Game is a Python terminal game, which runs in a mock terminal on Heroku.
+The Battle Ships is a Python terminal game, which runs in a mock terminal on Heroku.
 
-Users can test their knowledge on a range of subjects, with varying difficulty.
+Users can play the game and see if you can win in 10 shots
 
 [Play the live version of the project on Heroku](https://battle-ships-single-e8c9730c38b1.herokuapp.com/)
 
-![]()
+![Image of all screen sizes](docs/image/all_screens.png)
 
 ## How to play
-
+This game is a very simple game all the player has to do is write in the coordinates in a format of 0,0, only two numbers with a comma inbetween with no spaces. 
 ## Features
-
+- The game has a player input that chooses there position they wish ti hit on the grid
+- Inputs are all checked and will give an example of what to put
+- The game has a shot count down
+- there is a message at the end if you win or lose  
 ### Game Workflow
 
-Two process flows are included:
+ flows of the game:
 1. 
 2. 
 
@@ -74,14 +77,20 @@ The following classes are the classes that are implemented which are listed belo
 - Player_Input_checks
 - Game
 
-### Class
-
-
 ### Player_Input Class
+This creates the input that the player uses and also checks all the outcomes in case the player has entered the wrong input.
 
+### Battleship Class
+This class creates a ship object with a given position on the grid. It also keeps track of the ship's status, whether it is alive or not, using a boolean attribute. When the ship is hit by the player's input, it changes its symbol from 'S' to 'H' on the grid, and updates its status accordingly.
+
+### Grid Drawing Class
+The Grid class is responsible for creating and displaying the grid on the console. It also keeps track of the missed shots. It has also make the grid boarder too.
+
+### Player Input Checker Class
+This class is similar to the PlayerInput class, but it mainly handles the input of letters and numbers. It ensures that the name and the number inputs are valid and have the correct length.
 
 ### Game Class
-     
+The Game class is the core of the game logic and functionality. It has methods that handle the round countdown, the grid update, the end game message, and the display of misses and score.
 
 ## Technology Used
 
@@ -136,13 +145,17 @@ To Clone the Quiz Game repository:
 7. Press enter to clone the repository
 
 #### How to fork the repository
-To fork the Quiz Game Repository:
+To fork the Game Repository:
 
 1. Log in to Github
-2. Go to the repository for this project, jayleighton/quiz-game
+2. Go to the repository for this project
 3. Select Fork at the top of the screen
 
 ### How to deploy the game
+
+1. step one use this link to get to Heroku website [link](https://dashboard.heroku.com/apps/battle-ships-single/metrics)
+[image of home page]()
+2. 
 
 #### Reminders
 
