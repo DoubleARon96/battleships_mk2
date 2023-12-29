@@ -47,8 +47,8 @@ class Player_Input:
     def get_player_choice(self):
         valid_input = False
         while not valid_input:
-            print("Input Guild:first number is Y axis (0 To 4)")
-            print("Input Guild:second number is X axis (0 To 9)")
+            print("Input Guild:first number is Y axis (0 To 4) e.g: 0,4")
+            print("Input Guild:second number is X axis (0 To 9) eg: 0,9")
             player_input = input("Enter your choice: ")
             try:
                 player_choice = list(map(int, player_input.split(",")))
@@ -83,7 +83,7 @@ class Battleship():
         self.coords_Y = random_num_choice_Y
 
     def check_hit_or_miss(self, X, Y):
-        print(self.coords_X, self.coords_Y)
+        #print(self.coords_X, self.coords_Y)
         if (X == self.coords_X and Y == self.coords_Y):
             self.Is_Alive = False
             return "Hit!"
@@ -103,15 +103,15 @@ class grid_drawing():
         x = 10
         self.grid = [["O" for _ in range(x)] for _ in range(y)]
         for ship in ships:
-            print(ship.coords_X, ship.coords_Y)
-        if (ship.Is_Alive):
-            self.grid[ship.coords_Y][ship.coords_X] = "S"
-        else:
-            self.grid[ship.coords_Y][ship.coords_X] = "H"
+                #print(ship.coords_X, ship.coords_Y)
+            if (ship.Is_Alive):
+                self.grid[ship.coords_Y][ship.coords_X] = "S"
+            else:
+                self.grid[ship.coords_Y][ship.coords_X] = "H"
         for i, j in misses:
             self.grid[i][j] = "M"
-        self.ships = ships
-        self.misses = misses
+            self.ships = ships
+            self.misses = misses
 
     def update_grid(self, ships, misses):
         for ship in ships:
@@ -137,7 +137,6 @@ class grid_drawing():
                     print(self.grid[i][j], end="")
             print("    |")
         print("----------------------")
-    # these help choose where the ships spawn on the grid
 
 
 '\n'
