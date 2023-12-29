@@ -87,3 +87,14 @@ This class is to check the grid if the player input is a miss or hit.
 
         else:
             return "Miss!"
+print("test1")
+class grid_drawing():
+    grid = [[],[]]
+    
+    """
+    this class draws out the grid and updates the ships, hits, misses
+    """
+    def __init__(self, ships, misses):
+        y = 5
+        x = 10
+        self.grid = [["O" for _ in range(x)] for _ in range(y)]
