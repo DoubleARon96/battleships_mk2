@@ -203,18 +203,25 @@ class Game:
         gd = grid_drawing(ships, misses)
         print("Shots left: " + str(self.shots))
         gd.print_grid()
-        while self.shots > 0:
+
+        game_over = False
+
+        while self.shots > 0 and not game_over:
             player_choice = player.get_player_choice()
             self.shots -= 1
             print(player_choice)
 
             num_misses = 0
             for ship in ships:
-                result = ship.check_hit_or_miss(player_choice[0], player_choice[1])
+                result = ship.check_hit_or_miss(player_choice[0],
+                                                player_choice[1])
                 if (result == "Miss!"):
                     num_misses += 1
                 else:
                     print(result)
+
+
+            print ("Misses:", len(misses))
 
             if (num_misses == len(ships)):
                 misses.append((player_choice[0], player_choice[1]))
@@ -222,6 +229,17 @@ class Game:
             gd.update_grid(ships, misses)
             print("Shots left: " + str(self.shots))
             gd.print_grid()
+            # checks if game over 
+            if self.shots == 0 or all(not ship.Is_Alive for ship in ships):
+                game_over = True
+                self.score = self.shots * 10
+                
+                if self.shots == 0:
+                    print("Game Over! You Ran Out! You lose!")
+                
+                else:
+                    print("WOOO HOOO You Won This Battle")
+                    print(f"Your score is {self.score}")
 
 
 game = Game(10, 0)
