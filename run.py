@@ -135,3 +135,10 @@ class grid_drawing():
         print("----------------------")
     #these help choose where the ships spawn on the grid
 '\n' 
+class Player_Input_checks():
+ 
+    def __init__(self, player_choice, misses, hits):
+        
+        self.player_choice = player_choice
+        self.misses = misses
+        self.hits = hits
