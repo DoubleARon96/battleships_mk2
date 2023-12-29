@@ -142,3 +142,12 @@ class Player_Input_checks():
         self.player_choice = player_choice
         self.misses = misses
         self.hits = hits
+        
+    def check_input(self, input):
+        if len(input) == 2:
+            if input[0].isalpha() and input[0].upper() in "ABCDE":
+                if input[1].isnumeric() and int(input[1]) in range(0, 11):
+                    if input in ships:
+                        return True
+
+        return False
