@@ -61,3 +61,13 @@ class Player_Input:
                 valid_input = False
         
         return player_choice
+
+
+class Battleship():
+'''
+This class is to check the grid if the player input is a miss or hit.
+'''
+    def __init__(self, coords_X, coords_Y):
+        self.coords_X = coords_X
+        self.coords_Y = coords_Y
+        self.Is_Alive = True
