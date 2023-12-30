@@ -154,8 +154,16 @@ To fork the Game Repository:
 ### How to deploy the game
 
 1. step one use this link to get to Heroku website [link](https://dashboard.heroku.com/apps/battle-ships-single/metrics)
-[image of home page]()
-2. 
+[image of home page](docs/image/heroku_home_page.png)
+2. click on the new button top right of the screen 
+[New Button](docs/image/new_button.png)
+3. Next go to the settings tab always do the setting first fill in the name of the app and choose the hosting website you use, i used Github
+[settings page](docs/image/Name_stage_deplyment.png)
+4. The next stage is picking the build packs all you need for this game is python and jsnode. make sure python is the top one on the load order
+[Build Packs](docs/image/build_pack_mini_window.png)
+
+
+
 
 #### Reminders
 
@@ -176,7 +184,27 @@ Connect your GitHub repository and deploy as normal.
 
 
 
-## Credits
-
 ### Code Credits
+these are the websites I used to help me beat some of the bugs I encountered.
+[flex box froggy](https://flexboxfroggy.com/)
+I used this to help understand how the flexbox works.
+[W3 learing](https://www.w3schools.com/css/css_positioning.asp)
+this was the main one for any issues and to remind me of the syntax.
+[code instituet](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)
+this was also the big one that helped me used bits from the Love Running project to help me understand
+my form and all the socials were the big ones.
+[Python Validator](https://pep8ci.herokuapp.com/#)
+ for checking my work.
+ 
+ [Am I Responsive](https://ui.dev/amiresponsive?url=https://doublearon96.github.io/Samcohoses/index.html)
+
+ [Jay leighton](https://github.com/jayleighton/quiz-game/blob/main/README.md)
+ I used Jay's Read me to help make my own one.
+#### Direct people
+
+Ciaran merritt my friend from school,
+Harry Dhillon my tutour support
+
+
+
 
