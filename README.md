@@ -20,9 +20,9 @@ This game is a very simple game all the player has to do is write in the coordin
 ### Game Workflow
 
  flow of the game:
-1. it has a player input for the players choosen name 
-2. there is a guilde of what you use as the input. this is the: 0,0
-3. also if the player dose write in the wrong one it will ask again untill they get it right.
+1. it has a player input for the players chosen name 
+2. there is a guide of what you use as the input. this is the: 0,0
+3. also if the player dose write in the wrong one it will ask again until they get it right.
 4. the player has 10 shots, that counts down every time they have a turn
 5. when it run down to zero it will print a win or lose statement also if all three ships are hit it will end and pint the win statement.
 
@@ -115,7 +115,7 @@ All code has been validated using the [Code Institute PEP8 validator](https://pe
 ## Other Tests
 - I got friend to play test
 - I also tried to break the game by :
-  - spaming the input with letters and with numbers
+  - spamming the input with letters and with numbers
   - wrote in all different ways to cause it to crash, other than ctrl C 
  
 
@@ -168,7 +168,7 @@ To fork the Game Repository:
 
 #### Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+When you create the app, you will need to add two build packs from the _Settings_ tab. The ordering is as follows:
 
 1. `heroku/python`
 2. `heroku/nodejs`
@@ -184,8 +184,8 @@ Connect your GitHub repository and deploy as normal.
 ### Code Credits
 - these are the websites I used to help me beat some of the bugs I encountered.
 
-- [W3 learing](https://www.w3schools.com/css/css_positioning.asp) this was the main one for any issues and To remind me of the syntax.
-- [code instituet](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)  This was also the big one that helped me used bits from the Love Running project to help me understand
+- [W3 learning](https://www.w3schools.com/css/css_positioning.asp) this was the main one for any issues and To remind me of the syntax.
+- [code institute](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)  This was also the big one that helped me used bits from the Love Running project to help me understand
 my form and all the socials were the big ones.
 - [Python Validator](https://pep8ci.herokuapp.com/#) For checking my work.
  
@@ -195,7 +195,7 @@ my form and all the socials were the big ones.
 #### Direct people
 
 - Ciaran merritt my friend from school,
-- Harry Dhillon my tutour support
+- Harry Dhillon my tutor support
 
 
 
