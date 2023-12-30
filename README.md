@@ -98,6 +98,7 @@ The following libraries are also required to run this project:
 - when you would hit on ship i hit them all. solution: I had used the same variable name so change them to septate ones.
 - the input would accept anything. Solution: to fix this I made rules for the input and kept checking.
 - printing out the grid. Solution: to fix this I had to do some research and found out it was my syntax and I had mixed up values
+- when the reset was made it would would make the shots 0 every time. solution:i had to set the number to 10 in the start function
 
 #### Remaining Bugs
 - the only thing i couldn't get working is to stop the player from hitting the same grid numbers twice.
@@ -110,6 +111,13 @@ All code has been validated using the [Code Institute PEP8 validator](https://pe
 - run.py validation
 
 ![run.py result](docs/image/ci_error_fixed_shot.png)
+
+## Other Tests
+- I got friend to play test
+- I also tried to break the game by :
+  - spaming the input with letters and with numbers
+  - wrote in all different ways to cause it to crash, other than ctrl C 
+ 
 
 
 
