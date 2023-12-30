@@ -55,7 +55,7 @@ class Player_Input:
                 player_choice = list(map(int, player_input.split(",")))
                 if (len(player_choice) != 2):
                     raise Exception("To Many Inputs")
-                
+
                 elif (
                     player_choice[0] not in range(5) or
                     player_choice[1] not in range(10)
@@ -68,7 +68,7 @@ class Player_Input:
                 e = "Please refer to the example for inputs = e.g: 0,0"
                 print(e)
                 valid_input = False
-            
+
         return player_choice
 
 
@@ -196,6 +196,8 @@ class Game:
 
         misses = []
 
+        self.shots = 10
+
         player = Player_Input()
 
         player.check_player_name()
@@ -239,7 +241,7 @@ class Game:
                 else:
                     print("WOOO HOOO You Won This Battle")
                     print(f"Your score is {self.score}")
-            while game_over == True:
+            while game_over is True:
                 answer = input("Do you want to play again? (Y/N) ")
                 if answer.upper() == "Y":
                     game.start()
