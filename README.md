@@ -17,11 +17,15 @@ This game is a very simple game all the player has to do is write in the coordin
 - there is a message at the end if you win or lose  
 ### Game Workflow
 
- flows of the game:
-1. 
-2. 
-
-[]()
+ flow of the game:
+1. first thing you have to do is enter your name 
+[First sight](docs/image/first_play.png)
+2. the next part prints out your name and then the game begins 
+[Second part](docs/image/second_stage.png)
+3. choose your coordinates and press enter
+[Third part](docs/image/third_stage.png)
+4. if you write in the wrong input you get this:
+[wrong input](docs/image/wrong_inpute_message.png)
 
 ### Existing Features
 
@@ -119,6 +123,7 @@ The following libraries are also required to run this project:
 
 #### Remaining Bugs
 - the only thing i couldn't get working is to stop the player from hitting the same grid numbers twice.
+- misses always skips the first one.
 
 ### Validator Testing
 
