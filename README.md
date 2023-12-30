@@ -71,7 +71,7 @@ This game is a very simple game all the player has to do is write in the coordin
 
 I used a series of classes, each class is used for a different parts of the game.
 The following classes are the classes that are implemented which are listed below:
-- Player_Inpute
+- Player_Input
 - Battleship
 - Grid_Drawing
 - Player_Input_checks
@@ -103,7 +103,9 @@ The project requires the following dependencies is order to run successfully:
 - Python3
 
 The following libraries are also required to run this project:
-
+- from random import randint
+- import time
+- import random
 
 
 ## Testing
@@ -111,13 +113,12 @@ The following libraries are also required to run this project:
 ### Bugs
 
 #### Solved Bugs
--
--
--
--
+- when you would hit on ship i hit them all. solution: I had used the same variable name so change them to septate ones.
+- the input would accept anything. Solution: to fix this I made rules for the input and kept checking.
+- printing out the grid. Solution: to fix this I had to do some research and found out it was my syntax and I had mixed up values
 
 #### Remaining Bugs
-- 
+- the only thing i couldn't get working is to stop the player from hitting the same grid numbers twice.
 
 ### Validator Testing
 
