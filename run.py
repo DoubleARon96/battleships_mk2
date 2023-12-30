@@ -14,6 +14,10 @@ name = ()
 
 
 class Player_Input:
+    """
+    this creates a checker and the player input so it will always check what 
+    is inputted 
+    """
     def __init__(self, player_name=None,):
         if not player_name:
             player_name = self.get_player_name()
@@ -77,7 +81,7 @@ class Battleship():
     """
     this class is the battle ship
     and gives it the states it needs
-    to change from alive with a boolen
+    to change from alive with a boolean
     """
     def __init__(self, coords_X, coords_Y):
         self.coords_X = coords_X
@@ -154,6 +158,10 @@ class grid_drawing():
 
 
 class Player_Input_checks():
+    """
+    this is another input checker and makes sure 
+    the length and the numbers and letter will be excepted
+    """
 
     def __init__(self, player_choice, misses, hits):
 
@@ -241,9 +249,9 @@ class Game:
                 else:
                     print("WOOO HOOO You Won This Battle")
                     print(f"Your score is {self.score}")
+            # this makes the game reset or end
             while game_over is True:
-                answer = input("Do you want to play again? ")
-                print("Y to restart anything else to end the game")
+                answer = input("Do you want to play again? Y to continue")
                 if answer.upper() == "Y":
                     game.start()
                 else:
