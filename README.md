@@ -21,7 +21,10 @@ This game is a very simple game all the player has to do is write in the coordin
 
  flow of the game:
 1. it has a player input for the players choosen name 
-2. there is a guilde of what you use as the input and 
+2. there is a guilde of what you use as the input. this is the: 0,0
+3. also if the player dose write in the wrong one it will ask again untill they get it right.
+4. the player has 10 shots, that counts down every time they have a turn
+5. when it run down to zero it will print a win or lose statement also if all three ships are hit it will end and pint the win statement.
 
 ### Existing Features
 1. first thing you have to do is enter your name 
@@ -135,18 +138,18 @@ To fork the Game Repository:
 ### How to deploy the game
 
 1. step one use this link to get to Heroku website [link](https://dashboard.heroku.com/apps/battle-ships-single/metrics)
-[image of home page](docs/image/heroku_home_page.png)
+![image of home page](docs/image/heroku_home_page.png)
 2. click on the new button top right of the screen 
-[New Button](docs/image/new_button.png)
+![New Button](docs/image/new_button.png)
 3. Next go to the settings tab always do the setting first fill in the name 
-[settings page](docs/image/Name_stage_deplyment.png)
+![settings page](docs/image/Name_stage_deplyment.png)
 4. The next stage is picking the build packs all you need for this game is python and jsnode. make sure python is the top one on the load order
-[Build Packs](docs/image/build_pack_mini_window.png)
+![Build Packs](docs/image/build_pack_mini_window.png)
 5. Now you can start the deployment first you need to link it too your github
-[Deployment stage](docs/image/connecting_to_github.png)
+![Deployment stage](docs/image/connecting_to_github.png)
 6. when thats all connected press deploy
-[deployment execute](docs/image/deployment_page.png)
-[Deployment mini window](docs/image/manual_deployment.png)
+![deployment execute](docs/image/deployment_page.png)
+![Deployment mini window](docs/image/manual_deployment.png)
 
 
 
