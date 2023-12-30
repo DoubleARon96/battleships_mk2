@@ -184,7 +184,6 @@ Connect your GitHub repository and deploy as normal.
 ### Code Credits
 - these are the websites I used to help me beat some of the bugs I encountered.
 
-- [flex box froggy](https://flexboxfroggy.com/) I used this to help understand how the flexbox works.
 - [W3 learing](https://www.w3schools.com/css/css_positioning.asp) this was the main one for any issues and To remind me of the syntax.
 - [code instituet](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)  This was also the big one that helped me used bits from the Love Running project to help me understand
 my form and all the socials were the big ones.
