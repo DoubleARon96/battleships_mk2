@@ -242,7 +242,8 @@ class Game:
                     print("WOOO HOOO You Won This Battle")
                     print(f"Your score is {self.score}")
             while game_over is True:
-                answer = input("Do you want to play again? (Y/N) ")
+                answer = input("Do you want to play again? ")
+                print("Y to restart anything else to end the game")
                 if answer.upper() == "Y":
                     game.start()
                 else:
