@@ -10,61 +10,36 @@ Users can play the game and see if you can win in 10 shots
 
 ## How to play
 This game is a very simple game all the player has to do is write in the coordinates in a format of 0,0, only two numbers with a comma inbetween with no spaces. 
+
 ## Features
 - The game has a player input that chooses there position they wish ti hit on the grid
 - Inputs are all checked and will give an example of what to put
 - The game has a shot count down
-- there is a message at the end if you win or lose  
+- there is a message at the end if you win or lose
+
 ### Game Workflow
 
  flow of the game:
-1. first thing you have to do is enter your name 
-[First sight](docs/image/first_play.png)
-2. the next part prints out your name and then the game begins 
-[Second part](docs/image/second_stage.png)
-3. choose your coordinates and press enter
-[Third part](docs/image/third_stage.png)
-4. if you write in the wrong input you get this:
-[wrong input](docs/image/wrong_inpute_message.png)
+1. it has a player input for the players choosen name 
+2. there is a guilde of what you use as the input and 
 
 ### Existing Features
+1. first thing you have to do is enter your name 
 
-- input configuration
-    - :
-        - 
+![First sight](docs/image/first_play.png)
 
-        ![]()
+2. the next part prints out your name and then the game begins 
 
-        -
+![Second part](docs/image/second_stage.png)
 
-        ![]()
+3. choose your coordinates and press enter
 
-        - 
+![Third part](docs/image/third_stage.png)
 
-        ![]()
+4. if you write in the wrong input you get this:
 
-        - 
+![wrong input](docs/image/wrong_inpute_message.png)
 
-        ![]()
-        
-    - 
-        
-        -  
-        
-        ![]()
-        
-        - 
-        
-        ![]()
-    
-    - 
-    
-    - 
-    
-    ![]()
-    
-    - 
-    
 ### Future Features
     - two player mode
     - npc board 
@@ -131,7 +106,7 @@ All code has been validated using the [Code Institute PEP8 validator](https://pe
 
 - run.py validation
 
-![run.py result](documentation/testing/run-file-validation.png)
+![run.py result](docs/image/ci_error_fixed_shot.png)
 
 
 
@@ -196,25 +171,21 @@ Connect your GitHub repository and deploy as normal.
 
 
 ### Code Credits
-these are the websites I used to help me beat some of the bugs I encountered.
-[flex box froggy](https://flexboxfroggy.com/)
-I used this to help understand how the flexbox works.
-[W3 learing](https://www.w3schools.com/css/css_positioning.asp)
-this was the main one for any issues and to remind me of the syntax.
-[code instituet](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)
-this was also the big one that helped me used bits from the Love Running project to help me understand
-my form and all the socials were the big ones.
-[Python Validator](https://pep8ci.herokuapp.com/#)
- for checking my work.
- 
- [Am I Responsive](https://ui.dev/amiresponsive?url=https://doublearon96.github.io/Samcohoses/index.html)
+- these are the websites I used to help me beat some of the bugs I encountered.
 
- [Jay leighton](https://github.com/jayleighton/quiz-game/blob/main/README.md)
- I used Jay's Read me to help make my own one.
+- [flex box froggy](https://flexboxfroggy.com/) I used this to help understand how the flexbox works.
+- [W3 learing](https://www.w3schools.com/css/css_positioning.asp) this was the main one for any issues and To remind me of the syntax.
+- [code instituet](https://learn.codeinstitute.net/ci_program/diplomainfullstacksoftwarecommoncurriculum)  This was also the big one that helped me used bits from the Love Running project to help me understand
+my form and all the socials were the big ones.
+- [Python Validator](https://pep8ci.herokuapp.com/#) For checking my work.
+ 
+- [Am I Responsive](https://ui.dev/amiresponsive?url=https://doublearon96.github.io/Samcohoses/index.html)
+
+- [Jay leighton](https://github.com/jayleighton/quiz-game/blob/main/README.md) I used Jay's Read me to help make my own one.
 #### Direct people
 
-Ciaran merritt my friend from school,
-Harry Dhillon my tutour support
+- Ciaran merritt my friend from school,
+- Harry Dhillon my tutour support
 
 
 
