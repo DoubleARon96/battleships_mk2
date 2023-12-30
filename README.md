@@ -121,7 +121,7 @@ The following libraries are also required to run this project:
 
 ### Validator Testing
 
-All code has been validated using the [Code Institute PEP8 validator](https://pep8ci.herokuapp.com/)
+All code has been validated using the [Code Institute PEP8 validator](https://pep8ci.herokuapp.com/#)
 
 - run.py validation
 
@@ -137,7 +137,7 @@ All code has been validated using the [Code Institute PEP8 validator](https://pe
 To Clone the Quiz Game repository:
 
 1. Log in to Github
-2. Got to the repository for this application, jayleighton/quiz-game
+2. Got to the repository for this application
 3. Click on the Code button at the top right of the screen and select HTTPS, SSH, or GitHub CLI
 4. Copy the link
 5. Open the terminal on your code editor in the directory where the project needs to be cloned
@@ -157,10 +157,15 @@ To fork the Game Repository:
 [image of home page](docs/image/heroku_home_page.png)
 2. click on the new button top right of the screen 
 [New Button](docs/image/new_button.png)
-3. Next go to the settings tab always do the setting first fill in the name of the app and choose the hosting website you use, i used Github
+3. Next go to the settings tab always do the setting first fill in the name 
 [settings page](docs/image/Name_stage_deplyment.png)
 4. The next stage is picking the build packs all you need for this game is python and jsnode. make sure python is the top one on the load order
 [Build Packs](docs/image/build_pack_mini_window.png)
+5. Now you can start the deployment first you need to link it too your github
+[Deployment stage](docs/image/connecting_to_github.png)
+6. when thats all connected press deploy
+[deployment execute](docs/image/deployment_page.png)
+[Deployment mini window](docs/image/manual_deployment.png)
 
 
 
